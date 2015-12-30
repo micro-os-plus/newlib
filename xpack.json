@@ -1,0 +1,53 @@
+{
+	"$schema": "http://xcdl.github.io/schemas/xpack-1-1.json",
+	"name": "ilg-newlib",
+	"title": "Newlib",
+	"description": "An xPack with Newlib related code.",
+	"xcdlFile": ".xcdl.json",
+	"repository": 
+	{
+		"type": "git",
+		"url": "https://github.com/micro-os-plus/newlib.git",
+		"archive": "https://github.com/micro-os-plus/newlib/archive/xpack.zip"
+	},
+
+	"version": "0.1.1",
+	"releases": [
+		
+	],
+
+	"keywords": [
+		"posix",
+		"io",
+		"portable"
+	],
+
+	"homepage": "https://github.com/micro-os-plus/newlib",
+	"support": [
+		{
+			"description": "all issues",
+			"url": "https://github.com/micro-os-plus/newlib/issues"
+		}
+	],
+
+	"license": "LGPL-3.0",
+	"maintainers": [
+		{
+			"name": "Liviu Ionescu",
+			"email": "ilg@livius.net",
+			"url": "http://liviusdotnet.worldpress.com"
+		}
+	],
+
+	"contributors": [
+		{
+			"name": "Liviu Ionescu",
+			"email": "ilg@livius.net",
+			"url": "http://liviusdotnet.worldpress.com"
+		}
+	],
+
+	"dependencies": [
+		
+	]
+}

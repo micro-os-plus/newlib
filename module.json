@@ -1,0 +1,23 @@
+{
+	"name": "ilg-newlib",
+	"description": "An xPack with Newlib related code.",
+	"version": "0.1.1",
+	"keywords": [
+		"posix",
+		"io",
+		"portable",
+		"xpack",
+		"xcdl"
+	],
+	"author": "Liviu Ionescu <ilg@livius.net>",
+	"homepage": "https://github.com/micro-os-plus/newlib",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/micro-os-plus/newlib.git"
+	},
+	"bugs": {
+		"url": "https://github.com/micro-os-plus/newlib/issues"
+	},
+	"license": "LGPL-3.0",
+	"dependencies": {}
+}
