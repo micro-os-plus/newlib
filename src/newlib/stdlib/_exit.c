@@ -17,8 +17,13 @@
  */
 
 #include <stdlib.h>
+#include "diag/trace.h"
 
 // ----------------------------------------------------------------------------
+
+#if defined(DEBUG)
+#define __DEBUG_BKPT()  asm volatile ("bkpt 0")
+#endif
 
 #if !defined(DEBUG)
 extern void __attribute__((noreturn))
@@ -40,11 +45,14 @@ _exit (int code);
 void __attribute__((weak))
 _exit (int code __attribute__((unused)))
 {
+  trace_puts("_exit()");
 #if !defined(DEBUG)
   __reset_hardware();
+#else
+  __DEBUG_BKPT();
 #endif
 
-  // TODO: write on trace
+  // For just in case.
   while (1)
     ;
   /* NOTREACHED */
