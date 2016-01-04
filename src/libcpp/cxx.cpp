@@ -49,6 +49,7 @@ extern "C"
   void
   __cxa_pure_virtual ()
   {
+    // Attempt to use a virtual function before object has been constructed
     trace_puts (__func__);
     abort ();
     /* NOTREACHED */
