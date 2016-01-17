@@ -29,9 +29,16 @@ __attribute__((noreturn))
 __assert_func (const char* file, int line, const char* func,
                const char* failedexpr)
 {
-  trace_printf ("assertion \"%s\" failed: file \"%s\", line %d%s%s\n",
-                failedexpr, file, line, func ? ", function: " : "",
-                func ? func : "");
+  // Not atomic, but otherwise the entire string might get too long,
+  // and temporary buffer used by trace_printf() will overflow.
+  trace_printf ("assertion \"%s\" failed\n", failedexpr);
+  trace_printf ("file: \"%s\"\n", file);
+  trace_printf ("line: %d\n", line);
+  if (func != NULL)
+    {
+      trace_printf ("function: %s\n", func);
+    }
+
   abort ();
   /* NOTREACHED */
 }
