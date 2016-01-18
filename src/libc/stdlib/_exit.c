@@ -16,8 +16,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <diag/trace.h>
+
 #include <stdlib.h>
-#include "diag/trace.h"
 
 // ----------------------------------------------------------------------------
 
@@ -36,16 +37,15 @@ _exit (int code);
 // ----------------------------------------------------------------------------
 
 // On Release, call the hardware reset procedure.
-// On Debug we just enter an infinite loop, to be used as landmark when halting
-// the debugger.
+// On Debug, use a breakpoint to notify the debugger.
 //
-// It can be redefined in the application, if more functionality
+// It can be redefined by the application, if more functionality
 // is required.
 
 void __attribute__((weak))
 _exit (int code __attribute__((unused)))
 {
-  trace_puts("_exit()");
+  trace_puts ("_exit()");
 #if !defined(DEBUG)
   __reset_hardware();
 #else
