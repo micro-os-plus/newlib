@@ -18,7 +18,7 @@
 
 #include <cstdlib>
 #include <sys/types.h>
-#include "diag/trace.h"
+#include <cmsis-plus/diag/trace.h>
 
 // ----------------------------------------------------------------------------
 

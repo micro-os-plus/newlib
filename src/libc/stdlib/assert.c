@@ -20,7 +20,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#include "diag/trace.h"
+#include <cmsis-plus/diag/trace.h>
 
 // ----------------------------------------------------------------------------
 

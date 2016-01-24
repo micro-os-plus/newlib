@@ -16,7 +16,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <diag/trace.h>
+#include <cmsis-plus/diag/trace.h>
 
 #include <stdlib.h>
 
